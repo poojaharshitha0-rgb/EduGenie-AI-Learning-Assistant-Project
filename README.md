@@ -8,6 +8,12 @@ The primary goal of EduGenie is to make learning interactive, personalized, and 
 
 ---
 
+## 🎬 Demo
+
+link
+
+---
+
 # 🚀 Features
 
 - ❓ AI Question Answering
