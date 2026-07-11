@@ -1,1 +1,1 @@
-# EduGenie-Google-Gemini-Powered-Learning-Assistant-Project
+# 🤖 EduGenie AI Learning Assistant
