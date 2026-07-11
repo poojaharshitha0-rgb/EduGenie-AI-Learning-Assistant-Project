@@ -36,29 +36,6 @@ The primary goal of EduGenie is to make learning interactive, personalized, and 
 
 ---
 
-# 📂 Project Structure
-
-
-EduGenie/
-
-│── main.py
-│── qna.py
-│── summary_module.py
-│── explanation_module.py
-│── quiz_module.py
-│── learning_path.py
-│── requirements.txt
-│── README.md
-
-├── templates/
-│      └── index.html
-
-├── static/
-│      └── style.css
-
-
----
-
 # ⚙️ Installation
 
 ## Step 1
@@ -219,31 +196,6 @@ Display to User
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots of:
-
-- Home Page
-- Question Answering
-- Notes Summarization
-- Concept Explanation
-- Quiz Generator
-- Learning Path
-
----
-
-# ✅ Advantages
-
-- Easy to use
-- AI-powered learning
-- Interactive interface
-- Personalized education
-- Saves study time
-- Fast response generation
-- Improves conceptual understanding
-
----
-
 # 📌 Applications
 
 - Schools
@@ -252,31 +204,6 @@ Add screenshots of:
 - Competitive Exam Preparation
 - Self-learning
 - Educational Institutions
-
----
-
-# 🔮 Future Enhancements
-
-- User Authentication
-- Voice-based Interaction
-- PDF Upload
-- Chat History
-- Progress Tracking
-- Dark Mode
-- Multilingual Support
-- Mobile Application
-
----
-
-# 🧪 Testing
-
-| Module | Status |
-|----------|--------|
-| Question Answering | ✅ Passed |
-| Summarization | ✅ Passed |
-| Explanation | ✅ Passed |
-| Quiz Generator | ✅ Passed |
-| Learning Path | ✅ Passed |
 
 ---
 
@@ -298,13 +225,3 @@ Academic Year: 2026–2027
 
 ---
 
-# 📚 References
-
-- Python Official Documentation
-- FastAPI Documentation
-- Google Gemini API Documentation
-- HTML5 Documentation
-- CSS3 Documentation
-- Jinja2 Documentation
-
----
