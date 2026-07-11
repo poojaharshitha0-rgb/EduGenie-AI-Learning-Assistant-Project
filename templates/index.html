@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<div class="navbar">
+    <div class="logo">🤖 EduGenie</div>
+
+    <div class="menu">
+        <a href="#qa">Q&A</a>
+        <a href="#summary">Summary</a>
+        <a href="#explain">Explain</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#learning">Learning Path</a>
+    </div>
+</div>
+
+
+<!-- Hero Section -->
+
+<div class="hero">
+
+    <h1>🤖 EduGenie AI Learning Assistant</h1>
+
+    <p>
+        Learn Faster • Understand Better • Practice Smarter
+    </p>
+
+</div>
+
+
+<div class="container">
+
+<!-- ===================== Q&A ===================== -->
+
+<div class="card" id="qa">
+
+<h2>❓ Ask Any Question</h2>
+
+<form action="/ask" method="post">
+
+<input
+type="text"
+name="question"
+placeholder="Ask any educational question..."
+required>
+
+<button type="submit">Ask</button>
+
+</form>
+
+{% if answer %}
+<div class="result">
+<h3>Answer</h3>
+<p>{{ answer }}</p>
+</div>
+{% endif %}
+
+</div>
+
+
+
+<!-- ===================== SUMMARY ===================== -->
+
+<div class="card" id="summary">
+
+<h2>📝 Summarize Notes</h2>
+
+<form action="/summary" method="post">
+
+<textarea
+name="notes"
+placeholder="Paste your notes here..."
+required></textarea>
+
+<button type="submit">
+Summarize
+</button>
+
+</form>
+
+{% if summary %}
+<div class="result">
+<h3>Summary</h3>
+<p>{{ summary }}</p>
+</div>
+{% endif %}
+
+</div>
+
+
+
+<!-- ===================== EXPLANATION ===================== -->
+
+<div class="card" id="explain">
+
+<h2>📘 Explain Concept</h2>
+
+<form action="/explain" method="post">
+
+<input
+type="text"
+name="topic"
+placeholder="Enter any topic..."
+required>
+
+<button type="submit">
+Explain
+</button>
+
+</form>
+
+{% if explanation %}
+<div class="result">
+<h3>Explanation</h3>
+<p>{{ explanation }}</p>
+</div>
+{% endif %}
+
+</div>
+
+
+
+<!-- ===================== QUIZ ===================== -->
+
+<!-- ================= QUIZ ================= -->
+
+<div class="card">
+
+    <h2>📝 Quiz Generator</h2>
+
+    <form action="/quiz" method="post">
+
+        <input
+            type="text"
+            name="topic"
+            placeholder="Enter topic..."
+            required>
+
+        <button type="submit">
+            Generate Quiz
+        </button>
+
+    </form>
+
+    <br>
+
+    {% if quiz %}
+
+        <div id="quiz-container">
+
+        {% for q in quiz %}
+
+            <div class="question-card">
+
+                <h3>Question {{ loop.index }}</h3>
+
+                <p><strong>{{ q.question }}</strong></p>
+
+                {% for option in q.options %}
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="q{{ loop.parent.index }}"
+                        value="{{ option }}">
+
+                    {{ option }}
+
+                </label>
+
+                <br>
+
+                {% endfor %}
+
+                <button
+                    type="button"
+                    onclick="checkAnswer(
+                        'q{{ loop.index }}',
+                        '{{ q.answer }}',
+                        'result{{ loop.index }}',
+                        '{{ q.explanation }}'
+                    )">
+
+                    Check Answer
+
+                </button>
+
+                <div
+                    id="result{{ loop.index }}"
+                    class="quiz-result">
+
+                </div>
+
+                <hr>
+
+            </div>
+
+        {% endfor %}
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+<!-- ===================== LEARNING PATH ===================== -->
+
+<div class="card" id="learning">
+
+<h2>🎯 Personalized Learning Path</h2>
+
+<form action="/learning" method="post">
+
+<input
+type="text"
+name="topic"
+placeholder="Enter Topic..."
+required>
+
+<button type="submit">
+Generate Path
+</button>
+
+</form>
+
+{% if learning %}
+<div class="result">
+
+<h3>Learning Roadmap</h3>
+
+<pre>{{ learning }}</pre>
+
+</div>
+{% endif %}
+
+</div>
+
+</div>
+
+
+
+<footer>
+
+<p>
+© 2026 EduGenie • Powered by Google Gemini • Built using FastAPI
+</p>
+
+</footer>
+<script>
+
+function checkAnswer(questionName, correctAnswer, resultId, explanation){
+
+    let options=document.getElementsByName(questionName);
+
+    let selected="";
+
+    for(let i=0;i<options.length;i++){
+
+        if(options[i].checked){
+
+            selected=options[i].value;
+
+        }
+
+    }
+
+    let result=document.getElementById(resultId);
+
+    if(selected==""){
+
+        result.innerHTML="<span style='color:orange;'>Please select an option.</span>";
+
+        return;
+
+    }
+
+    if(selected==correctAnswer){
+
+        result.innerHTML=
+        "<span style='color:green;font-weight:bold;'>✅ Correct!</span>";
+
+    }
+
+    else{
+
+        result.innerHTML=
+        "<span style='color:red;font-weight:bold;'>❌ Incorrect</span><br><br>"+
+        "<b>Correct Answer:</b> "+correctAnswer+
+        "<br><b>Explanation:</b> "+explanation;
+
+    }
+
+}
+
+</script>
+</body>
+</html>
