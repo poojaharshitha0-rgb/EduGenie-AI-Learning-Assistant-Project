@@ -46,7 +46,7 @@ link
 
 ~~~text
 EduGenie/
-
+|
 │── app.py
 │── qna.py
 │── summary_module.py
@@ -54,8 +54,10 @@ EduGenie/
 │── quiz_module.py
 │── learning_path.py
 │── requirements.txt
+|
 ├── templates/
 │      └── index.html
+|
 ├── static/
 │      └── style.css
 
