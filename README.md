@@ -44,7 +44,7 @@ link
 
 # 📂 Project Structure
 
-
+~~~text
 EduGenie/
 
 │── main.py
@@ -62,6 +62,7 @@ EduGenie/
 ├── static/
 │      └── style.css
 
+~~~
 
 ---
 
