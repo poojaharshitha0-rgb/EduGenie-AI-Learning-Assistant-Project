@@ -42,6 +42,29 @@ link
 
 ---
 
+# 📂 Project Structure
+
+
+EduGenie/
+
+│── main.py
+│── qna.py
+│── summary_module.py
+│── explanation_module.py
+│── quiz_module.py
+│── learning_path.py
+│── requirements.txt
+│── README.md
+
+├── templates/
+│      └── index.html
+
+├── static/
+│      └── style.css
+
+
+---
+
 # ⚙️ Installation
 
 ## Step 1
