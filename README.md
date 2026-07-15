@@ -10,6 +10,8 @@ The primary goal of EduGenie is to make learning interactive, personalized, and 
 
 ## 🎬 Demo
 
+Due to larger file size, demo video is attached as Microsoft OneDrive link.
+click on below link 👇
 https://1drv.ms/v/c/33c2458b7bc0d0ba/IQCs6fMGgkwjTIu8gRQcRUbTAYjEvR_HVpsLh71YVuFjIW4?e=WBJSjm
 
 ---
