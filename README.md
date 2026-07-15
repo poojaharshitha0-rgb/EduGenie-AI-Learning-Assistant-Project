@@ -10,7 +10,7 @@ The primary goal of EduGenie is to make learning interactive, personalized, and 
 
 ## 🎬 Demo
 
-link
+https://1drv.ms/v/c/33c2458b7bc0d0ba/IQCs6fMGgkwjTIu8gRQcRUbTAYjEvR_HVpsLh71YVuFjIW4?e=WBJSjm
 
 ---
 
